@@ -1,0 +1,73 @@
+.mapContainer { 
+    margin-left:40px;
+    margin-top:40px;
+    display: flex;
+    flex-direction:column;
+}
+.controls {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+.displayField{
+    width:800px;
+    height:800px;
+    background-color: #bbbbb6;
+    border: 2px solid #000000;
+    position: relative;
+    cursor: crosshair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    margin-top: 20px;
+}
+
+#imageCanvas {
+    display: block;
+}
+
+#onAllyMarker {
+    background-color: transparent;
+    border: 3px solid green;
+    opacity: 0.8;
+    display: none;
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+#onAllyMarker::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#onEnemyMarker {
+    background-color:transparent;
+    display: none;
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.8;
+    border: 3px solid red;
+    transform: translate(-50%, -50%);
+}
+#onEnemyMarker::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RangeFinder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+
+    <div class="mapContainer">
+        <input type="file" id="imageUpload" accept="image/*">
+
+            <div class="displayField">
+                <canvas id="imageCanvas" width="800" height="800"></canvas> 
+                <div id="onAllyMarker"></div>
+                <div id="onEnemyMarker"></div>
+            </div>    
+               
+        <div class="controls">
+            <label for="gridDistanceInput">Відстань сітки (метри):</label>
+            <input type="number" id="gridDistanceInput" value="100" step="1" min="1" title="Фактична відстань в метрах між двома точками сітки.">
+
+            <button id="startGridPosition">defines start of solo grid</button>
+            <button id="endGridPosition">defines end of solo grid</button>
+            <button id="startVehiclePosition">your tank</button>
+            <button id="endVehiclePosition">enemy's tank</button>
+            <p>distance: <span id="distanceField"> 0 </span>meters.</p>
+        </div>
+    </div>
+    <script src="index.js" defer></script>
+</body>
+</html>
